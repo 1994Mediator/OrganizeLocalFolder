@@ -11,6 +11,10 @@ import java.util.List;
 
 public class makeLogger {
 
+	/**
+	 * ログファイルの設定
+	 * @return ログファイル
+	 */
 	public Path makingLogFile()
 	{
         //Calendarクラスのオブジェクトを生成する
@@ -28,6 +32,11 @@ public class makeLogger {
 		return p;
 	}
 
+	/**
+	 * ログファイルへ情報を書き込み
+	 * @param p　ログファイル
+	 * @param fileList　書き込み内容（テストで今はリスト）
+	 */
 	public void writeFile(Path p,List<String> fileList)
 	{
 		try
