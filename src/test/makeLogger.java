@@ -19,11 +19,10 @@ public class makeLogger {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmSSS");
 		String timeText = sdf.format(cl.getTime());
 
-		Path p = Paths.get("C:/Users/itome/Downloads/fileExport"+timeText+".txt");
+		Path p = Paths.get("C:/Users/itome/Downloads/fileExport"+timeText+".log");
 		try {
 			Files.createFile(p);
 		} catch (IOException e) {
-			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		}
 		return p;
