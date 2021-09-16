@@ -12,7 +12,7 @@ import java.util.List;
 public class makeLogger {
 
 	/**
-	 * ログファイルの設定
+	 * ログファイルの設定 プッシュテスト
 	 * @return ログファイル
 	 */
 	public Path makingLogFile()
