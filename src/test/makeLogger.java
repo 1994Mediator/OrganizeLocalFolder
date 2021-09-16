@@ -12,7 +12,7 @@ import java.util.List;
 public class makeLogger {
 
 	/**
-	 * ログファイルの設定 プッシュテスト
+	 * ログファイルの設定
 	 * @return ログファイル
 	 */
 	public Path makingLogFile()
@@ -23,13 +23,13 @@ public class makeLogger {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmSSS");
 		String timeText = sdf.format(cl.getTime());
 
-		Path p = Paths.get("C:/Users/itome/Downloads/fileExport"+timeText+".log");
+		Path filePath = Paths.get("C:/Users/itome/Downloads/fileExport"+timeText+".log");
 		try {
-			Files.createFile(p);
+			Files.createFile(filePath);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		return p;
+		return filePath;
 	}
 
 	/**
@@ -37,11 +37,11 @@ public class makeLogger {
 	 * @param p　ログファイル
 	 * @param fileList　書き込み内容（テストで今はリスト）
 	 */
-	public void writeFile(Path p,List<String> fileList)
+	public void writeFile(Path filePath,List<String> fileList)
 	{
 		try
 		{
-			FileWriter filewriter = new FileWriter(p.toFile());
+			FileWriter filewriter = new FileWriter(filePath.toFile());
 	        //取得した一覧を表示する
 	        for (int i=0; i<fileList.size(); i++)
 	        {
